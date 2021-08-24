@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/UI/Narbar';
+import Footer from './components/UI/Footer';
+import Home from './components/Home';
+import InsertData from './components/InsertData';
+import Form from './components/Form';
+import PageNotFound from './components/PageNotFound';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <Navbar />
+        <Switch>
+          {/* Homepage route */}
+          <Route path='/' exact component={Home} />
+          {/* Insert data route */}
+          <Route path='/insertdata' exact component={InsertData} />
+          {/* Insert data route */}
+          <Route path='/insertdata/form' exact component={Form} />
+          {/* 404 route */}
+          <Route component={PageNotFound} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
