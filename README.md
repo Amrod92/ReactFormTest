@@ -1,7 +1,7 @@
 
-# React form test for Adzuna ✨
+# React form test ✨
 
-As part of the Adzuna coding test, I created this website to demonstrate my skills using Rect.JS, React Routing, React Bootstrap, HTML, CSS and JavaScript.
+I created this website to demonstrate my skills using Rect.JS, React Routing, React Bootstrap, HTML, CSS and JavaScript.
 
 ## Run Locally 🛠
 
